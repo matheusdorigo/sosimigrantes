@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "552838708337",
+    "project_id": "aula-efeab",
+    "storage_bucket": "aula-efeab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552838708337:android:52f07894a5014f7d8e6fd0",
+        "android_client_info": {
+          "package_name": "com.mycompany.immigrants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552838708337-3a7a28d6sm4qi1skmu794cnqr87e1ueg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.immigrants",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "552838708337-f1md0juh4ee3u0d5gm2bdtia5i5l5psg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ_Ktph_bgmqKXPQDoFsFeL27Oebejk0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552838708337-f1md0juh4ee3u0d5gm2bdtia5i5l5psg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "552838708337-5a1c1vvlivbhuknrm9tnunrbcuvt345b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.immigrants"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
