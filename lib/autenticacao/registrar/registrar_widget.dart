@@ -64,7 +64,9 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
         title: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
           child: Text(
-            'Criar conta',
+            FFLocalizations.of(context).getText(
+              '2sidvvor' /* Criar conta */,
+            ),
             style: FlutterFlowTheme.of(context).titleLarge.override(
                   fontFamily: 'Poppins',
                   color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -93,7 +95,9 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                     child: Text(
-                      'Crie sua conta, preenchendo as informações abaixo para acessar o aplicativo.',
+                      FFLocalizations.of(context).getText(
+                        'pww62s8q' /* Crie sua conta, preenchendo as... */,
+                      ),
                       style: FlutterFlowTheme.of(context).titleSmall.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -129,12 +133,16 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                 controller: _model.emailAddressController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Seu endereço de e-mail',
+                  labelText: FFLocalizations.of(context).getText(
+                    'o07q5sn4' /* Seu endereço de e-mail */,
+                  ),
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Poppins',
                         fontSize: 17.0,
                       ),
-                  hintText: 'Insira seu e-mail aqui....',
+                  hintText: FFLocalizations.of(context).getText(
+                    'af4rfjcd' /* Insira seu e-mail aqui.... */,
+                  ),
                   hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Lexend Deca',
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -200,12 +208,16 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                 controller: _model.passwordController,
                 obscureText: !_model.passwordVisibility,
                 decoration: InputDecoration(
-                  labelText: 'Senha',
+                  labelText: FFLocalizations.of(context).getText(
+                    'wmycs8ju' /* Senha */,
+                  ),
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Poppins',
                         fontSize: 17.0,
                       ),
-                  hintText: 'Insira sua senha aqui....',
+                  hintText: FFLocalizations.of(context).getText(
+                    'n7wkn039' /* Insira sua senha aqui.... */,
+                  ),
                   hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Lexend Deca',
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -285,12 +297,16 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                 controller: _model.confirmPasswordController,
                 obscureText: !_model.confirmPasswordVisibility,
                 decoration: InputDecoration(
-                  labelText: 'Senha',
+                  labelText: FFLocalizations.of(context).getText(
+                    's2vpbdse' /* Senha */,
+                  ),
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Poppins',
                         fontSize: 17.0,
                       ),
-                  hintText: 'Repita sua senha aqui....',
+                  hintText: FFLocalizations.of(context).getText(
+                    'e9gfvt8e' /* Repita sua senha aqui.... */,
+                  ),
                   hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Lexend Deca',
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -393,9 +409,11 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                       return;
                     }
 
-                    context.goNamedAuth('PaginaInicial', mounted);
+                    context.goNamedAuth('PaginaInicial', context.mounted);
                   },
-                  text: 'Criar Conta',
+                  text: FFLocalizations.of(context).getText(
+                    'wdrpw4oi' /* Criar Conta */,
+                  ),
                   options: FFButtonOptions(
                     width: 270.0,
                     height: 50.0,

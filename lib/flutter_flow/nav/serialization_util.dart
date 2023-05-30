@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
 import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
 import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
@@ -86,8 +87,11 @@ String? serializeParam(
       case ParamType.DocumentReference:
         return _serializeDocumentReference(param as DocumentReference);
       case ParamType.Document:
-        final reference = (param as dynamic).reference as DocumentReference;
+        final reference = (param as FirestoreRecord).reference;
         return _serializeDocumentReference(reference);
+
+      case ParamType.DataStruct:
+        return param is BaseStruct ? param.serialize() : null;
 
       case ParamType.SupabaseRow:
         return json.encode((param as SupabaseDataRow).data);
@@ -180,15 +184,17 @@ enum ParamType {
   JSON,
   Document,
   DocumentReference,
+  DataStruct,
   SupabaseRow,
 }
 
 dynamic deserializeParam<T>(
   String? param,
   ParamType paramType,
-  bool isList, [
+  bool isList, {
   List<String>? collectionNamePath,
-]) {
+  StructBuilder<T>? structBuilder,
+}) {
   try {
     if (param == null) {
       return null;
@@ -201,8 +207,13 @@ dynamic deserializeParam<T>(
       return paramValues
           .where((p) => p is String)
           .map((p) => p as String)
-          .map((p) =>
-              deserializeParam<T>(p, paramType, false, collectionNamePath))
+          .map((p) => deserializeParam<T>(
+                p,
+                paramType,
+                false,
+                collectionNamePath: collectionNamePath,
+                structBuilder: structBuilder,
+              ))
           .where((p) => p != null)
           .map((p) => p! as T)
           .toList();
@@ -247,6 +258,10 @@ dynamic deserializeParam<T>(
             return null;
         }
 
+      case ParamType.DataStruct:
+        final data = json.decode(param) as Map<String, dynamic>? ?? {};
+        return structBuilder != null ? structBuilder(data) : null;
+
       default:
         return null;
     }
@@ -258,16 +273,16 @@ dynamic deserializeParam<T>(
 
 Future<dynamic> Function(String) getDoc(
   List<String> collectionNamePath,
-  Serializer serializer,
+  RecordBuilder recordBuilder,
 ) {
   return (String ids) => _deserializeDocumentReference(ids, collectionNamePath)
       .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .then((s) => recordBuilder(s));
 }
 
 Future<List<T>> Function(String) getDocList<T>(
   List<String> collectionNamePath,
-  Serializer<T> serializer,
+  RecordBuilder<T> recordBuilder,
 ) {
   return (String idsList) {
     List<String> docIds = [];
@@ -279,9 +294,7 @@ Future<List<T>> Function(String) getDocList<T>(
       docIds.map(
         (ids) => _deserializeDocumentReference(ids, collectionNamePath)
             .get()
-            .then(
-              (s) => serializers.deserializeWith(serializer, serializedData(s)),
-            ),
+            .then((s) => recordBuilder(s)),
       ),
     ).then((docs) => docs.where((d) => d != null).map((d) => d!).toList());
   };

@@ -83,11 +83,15 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                     },
                     child: ListTile(
                       title: Text(
-                        'Pagina Inicial',
+                        FFLocalizations.of(context).getText(
+                          'gw5wc41w' /* Pagina Inicial */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          'gz8eunak' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -113,11 +117,15 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                     },
                     child: ListTile(
                       title: Text(
-                        'Documentação',
+                        FFLocalizations.of(context).getText(
+                          'q7u75cfn' /* Documentação */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          'sj8z9gy4' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -143,11 +151,15 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                     },
                     child: ListTile(
                       title: Text(
-                        'Hospedagem',
+                        FFLocalizations.of(context).getText(
+                          'ml7xer3o' /* Hospedagem */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          'fc5p2ywu' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -173,11 +185,15 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                     },
                     child: ListTile(
                       title: Text(
-                        'Saúde',
+                        FFLocalizations.of(context).getText(
+                          'w4jnz85n' /* Saúde */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          '744ubpq1' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -203,11 +219,15 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                     },
                     child: ListTile(
                       title: Text(
-                        'Sair',
+                        FFLocalizations.of(context).getText(
+                          'c1kbhj08' /* Sair */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para sair',
+                        FFLocalizations.of(context).getText(
+                          'yxxpj9gz' /* Clique aqui para sair */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -252,7 +272,9 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
               Align(
                 alignment: AlignmentDirectional(0.1, 0.0),
                 child: Text(
-                  '    Hospedagem - Housing - Alojamiento',
+                  FFLocalizations.of(context).getText(
+                    '1qv3wdpm' /*     Hospedagem - Housing - Alo... */,
+                  ),
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Poppins',
                         color: Colors.white,
@@ -268,6 +290,7 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
           elevation: 2.0,
         ),
         body: SafeArea(
+          top: true,
           child: ListView(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.vertical,
@@ -299,7 +322,9 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 20.0, 0.0),
                                 child: Text(
-                                  'Abrigos Públicos',
+                                  FFLocalizations.of(context).getText(
+                                    'rf3uzjj4' /* Abrigos Públicos */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .titleSmall
@@ -322,7 +347,9 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Text(
-                                  'Federal Government Program',
+                                  FFLocalizations.of(context).getText(
+                                    'xahwkohp' /* Federal Government Program */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .labelSmall
@@ -339,7 +366,11 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  'Onde conseguir abrigamento?\nSe você chegar no país e não tiver lugar para ficar, deve procurar o Centro de Referência Especializado de Assistência Social mais próximo para informações (de segunda a sexta-feira, 08-18h). A estadia nos abrigos públicos é gratuita, no entanto, as vagas são limitadas.\n\nEmbora existam alguns abrigos especificamente projetados para receber solicitantes de refúgio e refugiados, eles têm vagas limitadas. A maioria das vagas dos abrigos estão abertas para brasileiros, refugiados e migrantes em situação de vulnerabilidade. Os abrigos costumam ter limites em relação ao período de estadia, os quais vão desde apenas uma noite até alguns meses.\n\nEm caso de dificuldades para conseguir vaga nos abrigos públicos, busque pelas organizações parceiras do ACNUR.',
+                                  FFLocalizations.of(context).getText(
+                                    'r0gsat2v' /* Onde conseguir abrigamento?
+Se... */
+                                    ,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -377,7 +408,9 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 10.0, 0.0),
                                 child: Text(
-                                  'CRAS - Centro de Referência da Assistência Social',
+                                  FFLocalizations.of(context).getText(
+                                    'je70ktki' /* CRAS - Centro de Referência da... */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .titleSmall
@@ -400,7 +433,9 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Text(
-                                  'Federal Government Program',
+                                  FFLocalizations.of(context).getText(
+                                    '66qktaom' /* Federal Government Program */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .labelSmall
@@ -417,7 +452,12 @@ class _HospedagemWidgetState extends State<HospedagemWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  'O que é CRAS?\n\nO Centro de Referência de Assistência Social (CRAS) é um equipamento público no qual são oferecidos serviços, programas e benefícios com o objetivo de prevenir situações de risco e de fortalecer os vínculos familiares e comunitários.\n\nO Sistema Único de Assistência Social (SUAS) está organizado por meio de uma rede de proteção social, que pode ser básica ou especial. As unidades que ofertam serviços e programas desse sistema descentralizado e participativo são chamados de CRAS e CREAS (Centro de Referência Especializado de Assistência Social).',
+                                  FFLocalizations.of(context).getText(
+                                    'ok79l904' /* O que é CRAS?
+
+O Centro de Ref... */
+                                    ,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(

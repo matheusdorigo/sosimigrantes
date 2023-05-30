@@ -104,11 +104,15 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                     },
                     child: ListTile(
                       title: Text(
-                        'Pagina Inicial',
+                        FFLocalizations.of(context).getText(
+                          'pz706m3g' /* Pagina Inicial */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          'qt8py1qz' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -134,11 +138,15 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                     },
                     child: ListTile(
                       title: Text(
-                        'Documentação',
+                        FFLocalizations.of(context).getText(
+                          'jvcttjk2' /* Documentação */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          'qim7zf2c' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -164,11 +172,15 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                     },
                     child: ListTile(
                       title: Text(
-                        'Hospedagem',
+                        FFLocalizations.of(context).getText(
+                          'r6hsxp7v' /* Hospedagem */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          'zcvs8o5f' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -194,11 +206,15 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                     },
                     child: ListTile(
                       title: Text(
-                        'Saúde',
+                        FFLocalizations.of(context).getText(
+                          'biom6lkz' /* Saúde */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para acessar',
+                        FFLocalizations.of(context).getText(
+                          '97nrrdqm' /* Clique aqui para acessar */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -233,11 +249,15 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                     },
                     child: ListTile(
                       title: Text(
-                        'Sair',
+                        FFLocalizations.of(context).getText(
+                          'pedaxtzf' /* Sair */,
+                        ),
                         style: FlutterFlowTheme.of(context).labelLarge,
                       ),
                       subtitle: Text(
-                        'Clique aqui para sair',
+                        FFLocalizations.of(context).getText(
+                          'rmcqjua5' /* Clique aqui para sair */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w200,
@@ -291,7 +311,9 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                 Align(
                   alignment: AlignmentDirectional(-0.1, -0.25),
                   child: Text(
-                    'Utilidades - Telefones úteis',
+                    FFLocalizations.of(context).getText(
+                      '6cjgmifl' /* Utilidades - Telefones úteis */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Poppins',
                           color: Colors.white,
@@ -308,6 +330,7 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
           elevation: 2.0,
         ),
         body: SafeArea(
+          top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -325,7 +348,9 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: 'Telefones Úteis',
+                            text: FFLocalizations.of(context).getText(
+                              'ouyfem8b' /* Telefones Úteis */,
+                            ),
                             style: TextStyle(),
                           )
                         ],
@@ -373,7 +398,9 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                         label: DefaultTextStyle.merge(
                                           softWrap: true,
                                           child: Text(
-                                            'Utilidade',
+                                            FFLocalizations.of(context).getText(
+                                              '6xyib6bg' /* Utilidade */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -391,7 +418,9 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                         label: DefaultTextStyle.merge(
                                           softWrap: true,
                                           child: Text(
-                                            'Telefone',
+                                            FFLocalizations.of(context).getText(
+                                              '4neqfs94' /* Telefone */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -409,7 +438,9 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                         label: DefaultTextStyle.merge(
                                           softWrap: true,
                                           child: Text(
-                                            'Tipo',
+                                            FFLocalizations.of(context).getText(
+                                              'qmznn39s' /* Tipo */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -450,8 +481,7 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                                       textSpRecordList =
                                                       snapshot.data!;
                                                   return Text(
-                                                    dataTableSpRecord
-                                                        .utilidade!,
+                                                    dataTableSpRecord.utilidade,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -468,7 +498,7 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                                 },
                                               ),
                                               Text(
-                                                dataTableSpRecord.telefone!,
+                                                dataTableSpRecord.telefone,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -483,7 +513,7 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                                         ),
                                               ),
                                               Text(
-                                                dataTableSpRecord.tipo!,
+                                                dataTableSpRecord.tipo,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -521,7 +551,9 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                               ),
                             ),
                             Text(
-                              'Telefones Úteis',
+                              FFLocalizations.of(context).getText(
+                                'ka9bqqjv' /* Telefones Úteis */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

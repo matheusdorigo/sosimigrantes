@@ -1,49 +1,64 @@
 import 'dart:async';
 
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
+
 import 'index.dart';
-import 'serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-part 'estados_record.g.dart';
+class EstadosRecord extends FirestoreRecord {
+  EstadosRecord._(
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
+    _initializeFields();
+  }
 
-abstract class EstadosRecord
-    implements Built<EstadosRecord, EstadosRecordBuilder> {
-  static Serializer<EstadosRecord> get serializer => _$estadosRecordSerializer;
+  // "id" field.
+  int? _id;
+  int get id => _id ?? 0;
+  bool hasId() => _id != null;
 
-  int? get id;
+  // "estado" field.
+  String? _estado;
+  String get estado => _estado ?? '';
+  bool hasEstado() => _estado != null;
 
-  String? get estado;
+  // "sigla" field.
+  String? _sigla;
+  String get sigla => _sigla ?? '';
+  bool hasSigla() => _sigla != null;
 
-  String? get sigla;
-
-  @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference? get ffRef;
-  DocumentReference get reference => ffRef!;
-
-  static void _initializeBuilder(EstadosRecordBuilder builder) => builder
-    ..id = 0
-    ..estado = ''
-    ..sigla = '';
+  void _initializeFields() {
+    _id = snapshotData['id'] as int?;
+    _estado = snapshotData['estado'] as String?;
+    _sigla = snapshotData['sigla'] as String?;
+  }
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('estados');
 
-  static Stream<EstadosRecord> getDocument(DocumentReference ref) => ref
-      .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Stream<EstadosRecord> getDocument(DocumentReference ref) =>
+      ref.snapshots().map((s) => EstadosRecord.fromSnapshot(s));
 
-  static Future<EstadosRecord> getDocumentOnce(DocumentReference ref) => ref
-      .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Future<EstadosRecord> getDocumentOnce(DocumentReference ref) =>
+      ref.get().then((s) => EstadosRecord.fromSnapshot(s));
 
-  EstadosRecord._();
-  factory EstadosRecord([void Function(EstadosRecordBuilder) updates]) =
-      _$EstadosRecord;
+  static EstadosRecord fromSnapshot(DocumentSnapshot snapshot) =>
+      EstadosRecord._(
+        snapshot.reference,
+        mapFromFirestore(snapshot.data() as Map<String, dynamic>),
+      );
 
   static EstadosRecord getDocumentFromData(
-          Map<String, dynamic> data, DocumentReference reference) =>
-      serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
+    Map<String, dynamic> data,
+    DocumentReference reference,
+  ) =>
+      EstadosRecord._(reference, mapFromFirestore(data));
+
+  @override
+  String toString() =>
+      'EstadosRecord(reference: ${reference.path}, data: $snapshotData)';
 }
 
 Map<String, dynamic> createEstadosRecordData({
@@ -51,14 +66,12 @@ Map<String, dynamic> createEstadosRecordData({
   String? estado,
   String? sigla,
 }) {
-  final firestoreData = serializers.toFirestore(
-    EstadosRecord.serializer,
-    EstadosRecord(
-      (e) => e
-        ..id = id
-        ..estado = estado
-        ..sigla = sigla,
-    ),
+  final firestoreData = mapToFirestore(
+    <String, dynamic>{
+      'id': id,
+      'estado': estado,
+      'sigla': sigla,
+    }.withoutNulls,
   );
 
   return firestoreData;

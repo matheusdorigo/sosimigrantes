@@ -61,7 +61,9 @@ class _RecuperarSenhaWidgetState extends State<RecuperarSenhaWidget> {
         title: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
           child: Text(
-            'Recuperar Senha',
+            FFLocalizations.of(context).getText(
+              'j7l6sjj9' /* Recuperar Senha */,
+            ),
             style: FlutterFlowTheme.of(context).titleMedium.override(
                   fontFamily: 'Poppins',
                   color: FlutterFlowTheme.of(context).btnText,
@@ -90,7 +92,9 @@ class _RecuperarSenhaWidgetState extends State<RecuperarSenhaWidget> {
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
                     child: Text(
-                      'Nós lhe enviaremos um e-mail com um link para redefinir sua senha, digite abaixo o e-mail associado à sua conta.',
+                      FFLocalizations.of(context).getText(
+                        'v3we6g26' /* Nós lhe enviaremos um e-mail c... */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodySmall,
                     ),
                   ),
@@ -118,9 +122,13 @@ class _RecuperarSenhaWidgetState extends State<RecuperarSenhaWidget> {
                 controller: _model.emailAddressController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Seu endereço de e-mail...',
+                  labelText: FFLocalizations.of(context).getText(
+                    'd6bzqr2c' /* Seu endereço de e-mail... */,
+                  ),
                   labelStyle: FlutterFlowTheme.of(context).bodySmall,
-                  hintText: 'Insira seu endereço de e-mail...',
+                  hintText: FFLocalizations.of(context).getText(
+                    '0ggjm3by' /* Insira seu endereço de e-mail.... */,
+                  ),
                   hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0xFF57636C),
@@ -186,7 +194,9 @@ class _RecuperarSenhaWidgetState extends State<RecuperarSenhaWidget> {
                   context: context,
                 );
               },
-              text: 'Enviar Link',
+              text: FFLocalizations.of(context).getText(
+                '7410z1hh' /* Enviar Link */,
+              ),
               options: FFButtonOptions(
                 width: 270.0,
                 height: 50.0,

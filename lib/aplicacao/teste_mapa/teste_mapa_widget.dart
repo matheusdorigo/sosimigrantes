@@ -91,7 +91,9 @@ class _TesteMapaWidgetState extends State<TesteMapaWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: Text(
-                        'Pesquisar no Mapa',
+                        FFLocalizations.of(context).getText(
+                          '8je87pjx' /* Pesquisar no Mapa */,
+                        ),
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -111,6 +113,7 @@ class _TesteMapaWidgetState extends State<TesteMapaWidget> {
               elevation: 2.0,
             ),
             body: SafeArea(
+              top: true,
               child: Stack(
                 children: [
                   StreamBuilder<List<LocalizacaoRecord>>(
@@ -176,7 +179,9 @@ class _TesteMapaWidgetState extends State<TesteMapaWidget> {
                             .animateCamera(CameraUpdate.newLatLng(
                                 place.latLng.toGoogleMaps()));
                       },
-                      defaultText: 'Selecionar região',
+                      defaultText: FFLocalizations.of(context).getText(
+                        'xghird1k' /* Selecionar região */,
+                      ),
                       icon: Icon(
                         Icons.place,
                         color: Colors.white,

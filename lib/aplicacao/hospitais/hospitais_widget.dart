@@ -109,11 +109,15 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                       },
                       child: ListTile(
                         title: Text(
-                          'Pagina Inicial',
+                          FFLocalizations.of(context).getText(
+                            '567ms1d8' /* Pagina Inicial */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            '696075wy' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -140,11 +144,15 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                       },
                       child: ListTile(
                         title: Text(
-                          'Documentação',
+                          FFLocalizations.of(context).getText(
+                            'lvtcljwx' /* Documentação */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            '4a0dhw4y' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -171,11 +179,15 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                       },
                       child: ListTile(
                         title: Text(
-                          'Hospedagem',
+                          FFLocalizations.of(context).getText(
+                            '2851qvj1' /* Hospedagem */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            'sm6zuq7m' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -202,11 +214,15 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                       },
                       child: ListTile(
                         title: Text(
-                          'Saúde',
+                          FFLocalizations.of(context).getText(
+                            'vwwq4w5w' /* Saúde */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            'f2kfmno1' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -233,11 +249,15 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                       },
                       child: ListTile(
                         title: Text(
-                          'Sair',
+                          FFLocalizations.of(context).getText(
+                            'xe3xdxrx' /* Sair */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para sair',
+                          FFLocalizations.of(context).getText(
+                            '67k97166' /* Clique aqui para sair */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -284,7 +304,9 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
               Align(
                 alignment: AlignmentDirectional(0.1, 0.0),
                 child: Text(
-                  '       Hospitais - Hospitals - Hospitales',
+                  FFLocalizations.of(context).getText(
+                    'y0dvwa5k' /*        Hospitais */,
+                  ),
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Poppins',
                         color: Colors.white,
@@ -300,6 +322,7 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
           elevation: 2.0,
         ),
         body: SafeArea(
+          top: true,
           child: ListView(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.vertical,
@@ -386,7 +409,11 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                                             AlignmentDirectional(
                                                                 0.25, 0.0),
                                                         child: Text(
-                                                          '            Ambulância Pública - SAMU',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '1js06w98' /*             Ambulância Pública... */,
+                                                          ),
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: FlutterFlowTheme
@@ -425,7 +452,10 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'Federal Government Program',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'qce6094i' /* Federal Government Program */,
+                                                ),
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -450,7 +480,10 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                                     .fromSTEB(
                                                         5.0, 0.0, 5.0, 0.0),
                                                 child: Text(
-                                                  'O Serviço de Atendimento Móvel de Urgência (SAMU 192) tem como objetivo chegar precocemente à vítima após ter ocorrido alguma situação de urgência ou emergência que possa levar a sofrimento, a sequelas ou mesmo à morte. São urgências situações de natureza clínica, cirúrgica, traumática, obstétrica, pediátrica, psiquiátrica, entre outras.\n\n\nImportante: O SAMU 192 é um serviço gratuito, que funciona 24 horas, por meio da prestação de orientações e do envio de veículos tripulados por equipe capacitada, acessado pelo número \"192\" e acionado por uma Central de Regulação das Urgências.',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'fz205eku' /* O Serviço de Atendimento Móvel... */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -521,7 +554,10 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                                       AlignmentDirectional(
                                                           0.2, 0.0),
                                                   child: Text(
-                                                    '      Unidade Básica de Saúde - UBS',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'tyqv1j1w' /*       Unidade Básica de Saúde ... */,
+                                                    ),
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -550,7 +586,9 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                             .secondaryBackground,
                                       ),
                                       child: Text(
-                                        'Federal Government Program',
+                                        FFLocalizations.of(context).getText(
+                                          't61y8m8n' /* Federal Government Program */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -572,7 +610,9 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Unidades Básicas de Saúde ou UBS é a designação adotada desde 2007 no Brasil por meio do Programa de Aceleração do Crescimento sendo que tais unidades desempenham as mesmas funções dos antigos Postos de Saúde sendo tal denominação gradativamente substituída por Unidade Básica de Saúde.',
+                                            FFLocalizations.of(context).getText(
+                                              'hnyao3qp' /* Unidades Básicas de Saúde ou U... */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -630,7 +670,10 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                                 alignment: AlignmentDirectional(
                                                     -0.1, -0.1),
                                                 child: Text(
-                                                  ' Unidades de Pronto Atendimento - UPA',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'voydsag8' /*  Unidades de Pronto Atendiment... */,
+                                                  ),
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -660,7 +703,9 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                       .secondaryBackground,
                                 ),
                                 child: Text(
-                                  'Federal Government Program',
+                                  FFLocalizations.of(context).getText(
+                                    'sbf805nv' /* Federal Government Program */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -681,7 +726,9 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 5.0, 0.0),
                                       child: Text(
-                                        'Unidade de Pronto Atendimento, abreviadamente UPA ou UPA 24h, é uma espécie de posto de saúde instalada em diversas cidades do Brasil. São responsáveis por concentrar os atendimentos de saúde de média complexidade, compondo uma rede organizada em conjunto com a atenção básica e a atenção hospitalar.',
+                                        FFLocalizations.of(context).getText(
+                                          '4m019cat' /* Unidade de Pronto Atendimento,... */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -762,7 +809,9 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                                           .doc()
                                           .set(localizacaoCreateData);
                                     },
-                                    text: 'Encontre um hospital',
+                                    text: FFLocalizations.of(context).getText(
+                                      'y8juhcjn' /* Encontre um hospital */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 351.1,
                                       height: 41.2,
@@ -792,11 +841,14 @@ class _HospitaisWidgetState extends State<HospitaisWidget>
                             ),
                           ],
                         ),
-                        Image.network(
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLeRKgaLwQRbRLxtVWRCCyC4Fsg7zFhhIdQxES3WE7uuuK_DtTYFs-b9d0f4_fsQsv4bU&usqp=CAU',
-                          width: 304.1,
-                          height: 292.3,
-                          fit: BoxFit.cover,
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(30.0),
+                          child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLeRKgaLwQRbRLxtVWRCCyC4Fsg7zFhhIdQxES3WE7uuuK_DtTYFs-b9d0f4_fsQsv4bU&usqp=CAU',
+                            width: 304.1,
+                            height: 292.3,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ],
                     ),

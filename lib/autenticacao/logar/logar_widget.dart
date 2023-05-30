@@ -64,7 +64,9 @@ class _LogarWidgetState extends State<LogarWidget> {
             },
           ),
           title: Text(
-            'Autenticação',
+            FFLocalizations.of(context).getText(
+              'tjtvebyr' /* Autenticação */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Poppins',
                   color: Colors.white,
@@ -77,6 +79,7 @@ class _LogarWidgetState extends State<LogarWidget> {
           elevation: 2.0,
         ),
         body: SafeArea(
+          top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -114,7 +117,9 @@ class _LogarWidgetState extends State<LogarWidget> {
                         children: [
                           Expanded(
                             child: Text(
-                              'Bem vindo,',
+                              FFLocalizations.of(context).getText(
+                                'fvmhe8dy' /* Bem vindo, */,
+                              ),
                               style: FlutterFlowTheme.of(context).displaySmall,
                             ),
                           ),
@@ -165,10 +170,14 @@ class _LogarWidgetState extends State<LogarWidget> {
                               controller: _model.emailAddressController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Email Address',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '6nhzrumg' /* Email Address */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).titleSmall,
-                                hintText: 'Insira seu e-mail aqui...',
+                                hintText: FFLocalizations.of(context).getText(
+                                  'd1q5ewyu' /* Insira seu e-mail aqui... */,
+                                ),
                                 hintStyle:
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -227,10 +236,14 @@ class _LogarWidgetState extends State<LogarWidget> {
                               controller: _model.passwordController,
                               obscureText: !_model.passwordVisibility,
                               decoration: InputDecoration(
-                                labelText: 'Password',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '1873p6ga' /* Password */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).titleSmall,
-                                hintText: 'Insira sua senha aqui...',
+                                hintText: FFLocalizations.of(context).getText(
+                                  'wjm2titb' /* Insira sua senha aqui... */,
+                                ),
                                 hintStyle:
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -310,7 +323,9 @@ class _LogarWidgetState extends State<LogarWidget> {
                                 },
                               );
                             },
-                            text: 'Esqueceu sua senha ?',
+                            text: FFLocalizations.of(context).getText(
+                              'lzcmru4l' /* Esqueceu sua senha ? */,
+                            ),
                             options: FFButtonOptions(
                               width: 170.0,
                               height: 50.0,
@@ -347,9 +362,12 @@ class _LogarWidgetState extends State<LogarWidget> {
                                 return;
                               }
 
-                              context.goNamedAuth('PaginaInicial', mounted);
+                              context.goNamedAuth(
+                                  'PaginaInicial', context.mounted);
                             },
-                            text: 'Login',
+                            text: FFLocalizations.of(context).getText(
+                              'wxqm34f4' /* Login */,
+                            ),
                             options: FFButtonOptions(
                               width: 130.0,
                               height: 50.0,
@@ -399,7 +417,9 @@ class _LogarWidgetState extends State<LogarWidget> {
                             },
                           );
                         },
-                        text: 'Criar Conta',
+                        text: FFLocalizations.of(context).getText(
+                          'ib0oekpg' /* Criar Conta */,
+                        ),
                         options: FFButtonOptions(
                           width: 170.0,
                           height: 40.0,

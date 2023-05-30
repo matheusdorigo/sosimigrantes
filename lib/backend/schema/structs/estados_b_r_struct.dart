@@ -1,34 +1,94 @@
-import 'dart:async';
+// ignore_for_file: unnecessary_getters_setters
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../index.dart';
-import '../serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
 
-part 'estados_b_r_struct.g.dart';
+import 'index.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-abstract class EstadosBRStruct
-    implements Built<EstadosBRStruct, EstadosBRStructBuilder> {
-  static Serializer<EstadosBRStruct> get serializer =>
-      _$estadosBRStructSerializer;
+class EstadosBRStruct extends FFFirebaseStruct {
+  EstadosBRStruct({
+    int? id,
+    String? estado,
+    String? sigla,
+    FirestoreUtilData firestoreUtilData = const FirestoreUtilData(),
+  })  : _id = id,
+        _estado = estado,
+        _sigla = sigla,
+        super(firestoreUtilData);
 
-  int? get id;
+  // "id" field.
+  int? _id;
+  int get id => _id ?? 0;
+  set id(int? val) => _id = val;
+  void incrementId(int amount) => _id = id + amount;
+  bool hasId() => _id != null;
 
-  String? get estado;
+  // "estado" field.
+  String? _estado;
+  String get estado => _estado ?? '';
+  set estado(String? val) => _estado = val;
+  bool hasEstado() => _estado != null;
 
-  String? get sigla;
+  // "sigla" field.
+  String? _sigla;
+  String get sigla => _sigla ?? '';
+  set sigla(String? val) => _sigla = val;
+  bool hasSigla() => _sigla != null;
 
-  /// Utility class for Firestore updates
-  FirestoreUtilData get firestoreUtilData;
+  static EstadosBRStruct fromMap(Map<String, dynamic> data) => EstadosBRStruct(
+        id: data['id'] as int?,
+        estado: data['estado'] as String?,
+        sigla: data['sigla'] as String?,
+      );
 
-  static void _initializeBuilder(EstadosBRStructBuilder builder) => builder
-    ..id = 0
-    ..estado = ''
-    ..sigla = ''
-    ..firestoreUtilData = FirestoreUtilData();
+  static EstadosBRStruct? maybeFromMap(dynamic data) =>
+      data is Map<String, dynamic> ? EstadosBRStruct.fromMap(data) : null;
 
-  EstadosBRStruct._();
-  factory EstadosBRStruct([void Function(EstadosBRStructBuilder) updates]) =
-      _$EstadosBRStruct;
+  Map<String, dynamic> toMap() => {
+        'id': _id,
+        'estado': _estado,
+        'sigla': _sigla,
+      }.withoutNulls;
+
+  @override
+  Map<String, dynamic> toSerializableMap() => {
+        'id': serializeParam(
+          _id,
+          ParamType.int,
+        ),
+        'estado': serializeParam(
+          _estado,
+          ParamType.String,
+        ),
+        'sigla': serializeParam(
+          _sigla,
+          ParamType.String,
+        ),
+      }.withoutNulls;
+
+  static EstadosBRStruct fromSerializableMap(Map<String, dynamic> data) =>
+      EstadosBRStruct(
+        id: deserializeParam(
+          data['id'],
+          ParamType.int,
+          false,
+        ),
+        estado: deserializeParam(
+          data['estado'],
+          ParamType.String,
+          false,
+        ),
+        sigla: deserializeParam(
+          data['sigla'],
+          ParamType.String,
+          false,
+        ),
+      );
+
+  @override
+  String toString() => 'EstadosBRStruct(${toMap()})';
 }
 
 EstadosBRStruct createEstadosBRStruct({
@@ -41,28 +101,24 @@ EstadosBRStruct createEstadosBRStruct({
   bool delete = false,
 }) =>
     EstadosBRStruct(
-      (e) => e
-        ..id = id
-        ..estado = estado
-        ..sigla = sigla
-        ..firestoreUtilData = FirestoreUtilData(
-          clearUnsetFields: clearUnsetFields,
-          create: create,
-          delete: delete,
-          fieldValues: fieldValues,
-        ),
+      id: id,
+      estado: estado,
+      sigla: sigla,
+      firestoreUtilData: FirestoreUtilData(
+        clearUnsetFields: clearUnsetFields,
+        create: create,
+        delete: delete,
+        fieldValues: fieldValues,
+      ),
     );
 
 EstadosBRStruct? updateEstadosBRStruct(
   EstadosBRStruct? estadosBR, {
   bool clearUnsetFields = true,
 }) =>
-    estadosBR != null
-        ? (estadosBR.toBuilder()
-              ..firestoreUtilData =
-                  FirestoreUtilData(clearUnsetFields: clearUnsetFields))
-            .build()
-        : null;
+    estadosBR
+      ?..firestoreUtilData =
+          FirestoreUtilData(clearUnsetFields: clearUnsetFields);
 
 void addEstadosBRStructData(
   Map<String, dynamic> firestoreData,
@@ -86,8 +142,6 @@ void addEstadosBRStructData(
 
   final create = estadosBR.firestoreUtilData.create;
   firestoreData.addAll(create ? mergeNestedFields(nestedData) : nestedData);
-
-  return;
 }
 
 Map<String, dynamic> getEstadosBRFirestoreData(
@@ -97,8 +151,7 @@ Map<String, dynamic> getEstadosBRFirestoreData(
   if (estadosBR == null) {
     return {};
   }
-  final firestoreData =
-      serializers.toFirestore(EstadosBRStruct.serializer, estadosBR);
+  final firestoreData = mapToFirestore(estadosBR.toMap());
 
   // Add any Firestore field values
   estadosBR.firestoreUtilData.fieldValues

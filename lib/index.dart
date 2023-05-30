@@ -12,3 +12,4 @@ export '/autenticacao/logar/logar_widget.dart' show LogarWidget;
 export '/autenticacao/registrar/registrar_widget.dart' show RegistrarWidget;
 export '/autenticacao/recuperar_senha/recuperar_senha_widget.dart'
     show RecuperarSenhaWidget;
+export '/autenticacao/idioma/idioma_widget.dart' show IdiomaWidget;

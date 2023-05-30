@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -52,7 +53,9 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
           backgroundColor: Color(0xFF3947EF),
           automaticallyImplyLeading: false,
           title: Text(
-            'Welcome - Bem vindo - Bienvenido ',
+            FFLocalizations.of(context).getText(
+              '2xabn8v9' /* Bem vindo */,
+            ),
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Poppins',
                   color: FlutterFlowTheme.of(context).lineColor,
@@ -65,6 +68,7 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
           elevation: 0.0,
         ),
         body: SafeArea(
+          top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -102,53 +106,9 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          'SOS Imigrantes',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineMedium,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16.0, 8.0, 16.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Text(
-                                            'Um app para facilitar a sua chegada ao Brasil.',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall,
+                                          FFLocalizations.of(context).getText(
+                                            'f70u3j5i' /* SOS Imigrantes */,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 12.0, 12.0, 12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/illi_3@2x.png',
-                                    width: 300.0,
-                                    height: 300.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16.0, 8.0, 16.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Text(
-                                          'Header Two',
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium,
                                         ),
@@ -163,53 +123,9 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
                                       children: [
                                         Expanded(
                                           child: Text(
-                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 12.0, 12.0, 12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/illi_1@2x.png',
-                                    width: 300.0,
-                                    height: 300.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16.0, 8.0, 16.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Text(
-                                          'Header Three',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineMedium,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16.0, 8.0, 16.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Text(
-                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                                            FFLocalizations.of(context).getText(
+                                              'wa4bnl9h' /* Um app para facilitar a sua ch... */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall,
                                           ),
@@ -231,7 +147,7 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
                           child: smooth_page_indicator.SmoothPageIndicator(
                             controller: _model.pageViewController ??=
                                 PageController(initialPage: 0),
-                            count: 3,
+                            count: 1,
                             axisDirection: Axis.horizontal,
                             onDotClicked: (i) async {
                               await _model.pageViewController!.animateToPage(
@@ -257,13 +173,32 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
                   ),
                 ),
               ),
+              FlutterFlowLanguageSelector(
+                width: 200.0,
+                backgroundColor: Color(0xFF3947EF),
+                borderColor: Colors.transparent,
+                dropdownIconColor: Colors.white,
+                borderRadius: 8.0,
+                textStyle: FlutterFlowTheme.of(context).labelLarge.override(
+                      fontFamily: 'Poppins',
+                      color: FlutterFlowTheme.of(context).lineColor,
+                    ),
+                hideFlags: false,
+                flagSize: 24.0,
+                flagTextGap: 8.0,
+                currentLanguage: FFLocalizations.of(context).languageCode,
+                languages: FFLocalizations.languages(),
+                onChanged: (lang) => setAppLanguage(context, lang),
+              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 16.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     context.pushNamed('Logar');
                   },
-                  text: 'Acessar',
+                  text: FFLocalizations.of(context).getText(
+                    'utr4znio' /* Acessar */,
+                  ),
                   options: FFButtonOptions(
                     width: 300.0,
                     height: 50.0,
@@ -298,7 +233,9 @@ class _LoginInicialWidgetState extends State<LoginInicialWidget> {
                       },
                     );
                   },
-                  text: 'Criar Conta',
+                  text: FFLocalizations.of(context).getText(
+                    'wbyjc2af' /* Criar Conta */,
+                  ),
                   options: FFButtonOptions(
                     width: 300.0,
                     height: 50.0,

@@ -84,11 +84,15 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                       },
                       child: ListTile(
                         title: Text(
-                          'Pagina Inicial',
+                          FFLocalizations.of(context).getText(
+                            'ryrgkmfj' /* Pagina Inicial */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            'myg9qojs' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -115,11 +119,15 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                       },
                       child: ListTile(
                         title: Text(
-                          'Documentação',
+                          FFLocalizations.of(context).getText(
+                            'ras9m1lc' /* Documentação */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            'nku9a5wf' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -146,11 +154,15 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                       },
                       child: ListTile(
                         title: Text(
-                          'Hospedagem',
+                          FFLocalizations.of(context).getText(
+                            '7vq4b2ao' /* Hospedagem */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            'm94nvj1i' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -177,11 +189,15 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                       },
                       child: ListTile(
                         title: Text(
-                          'Saúde',
+                          FFLocalizations.of(context).getText(
+                            'eyrvo4m2' /* Saúde */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para acessar',
+                          FFLocalizations.of(context).getText(
+                            'bws8186s' /* Clique aqui para acessar */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -217,11 +233,15 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                       },
                       child: ListTile(
                         title: Text(
-                          'Sair',
+                          FFLocalizations.of(context).getText(
+                            'usxjtkm7' /* Sair */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelLarge,
                         ),
                         subtitle: Text(
-                          'Clique aqui para sair',
+                          FFLocalizations.of(context).getText(
+                            'dqjs8hxc' /* Clique aqui para sair */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Poppins',
@@ -268,15 +288,22 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                 ),
                 Align(
                   alignment: AlignmentDirectional(-0.15, -0.4),
-                  child: Text(
-                    '   Documentação - Documentation - Documentación',
-                    textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          fontFamily: 'Poppins',
-                          color: Colors.white,
-                          fontSize: 11.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'dactk3y4' /*    Documentação */,
+                      ),
+                      textAlign: TextAlign.center,
+                      style:
+                          FlutterFlowTheme.of(context).headlineMedium.override(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                    ),
                   ),
                 ),
               ],
@@ -287,6 +314,7 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
           elevation: 2.0,
         ),
         body: SafeArea(
+          top: true,
           child: ListView(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.vertical,
@@ -333,7 +361,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 0.0, 5.0, 0.0),
                                             child: Text(
-                                              'Carteira de Registro Nacional Migratório (CRNM)',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '749k498q' /* Carteira de Registro Nacional ... */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -363,7 +394,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: Text(
-                                              'O que é?',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'f5l136t4' /* O que é? */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -385,7 +419,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                     .fromSTEB(
                                                         5.0, 0.0, 5.0, 0.0),
                                                 child: Text(
-                                                  'O CRNM é a Carteira de Registro Nacional Migratório - também conhecido popularmente como “Carteira do estrangeiro ou Documento de identificação do estrangeiro”, trata-se do documento mais importante na vida de um migrante que se deseja morar no Brasil.',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ju3l2pee' /* O CRNM é a Carteira de Registr... */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -442,7 +479,9 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                         initialExpanded: false,
                                         child: ExpandablePanel(
                                           header: Text(
-                                            'Quem pode solicitar?',
+                                            FFLocalizations.of(context).getText(
+                                              'pah1mzxv' /* Quem pode solicitar? */,
+                                            ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
@@ -468,7 +507,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'Estrangeiros que possuem...',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '3ld8whuw' /* Estrangeiros que possuem... */,
+                                                ),
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -490,7 +532,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                       .fromSTEB(
                                                           5.0, 0.0, 5.0, 0.0),
                                                   child: Text(
-                                                    'Após a entrevista no CONARE, você receberá a informação por meio do Sisconare se foi reconhecido como refugiado.\n\nPara solicitar a sua CRNM será preciso:\n\nReunir os documentos necessários. Para saber quais são, acesse o site da Polícia Federal\nVerifique os custos da emissão da sua carteira no site da Polícia Federal.\nPreencha o formulário;\nRealize o agendamento para comparecer à Polícia Federal e retirar a sua CRNM.\nCaso você precise de ajuda nesse processo, entre em contato com a organização parceira do ACNUR mais próxima.',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '0icuebv2' /* Após a entrevista no CONARE, v... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -537,7 +582,9 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                         initialExpanded: false,
                                         child: ExpandablePanel(
                                           header: Text(
-                                            'Sian – Sistema de Informações do Arquivo Nacional',
+                                            FFLocalizations.of(context).getText(
+                                              '1b6j05qu' /* Sian – Sistema de Informações ... */,
+                                            ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
@@ -563,7 +610,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'O Arquivo Nacional sobre estrangeiros no Brasil.',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'sufwbw6f' /* O Arquivo Nacional sobre estra... */,
+                                                ),
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -591,7 +641,11 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                             .fromSTEB(5.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: Text(
-                                                      'O Arquivo Nacional possui milhares de documentos sobre estrangeiros no Brasil. O usuário que deseja localizar informações ou até mesmo fazer pesquisas históricas sobre imigração pode recorrer a muitos desses conjuntos documentais custodiados pela instituição. Para obter um documento que comprove a nacionalidade de algum antepassado a fim de solicitar dupla cidadania a um governo estrangeiro, o cidadão deve seguir um roteiro  de pesquisa. Para mais informacções consulte o site www. sian.an.gov.br\n',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'm0fs817x' /* O Arquivo Nacional possui milh... */,
+                                                      ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyMedium
@@ -644,7 +698,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Text(
-                                                'Refugiado x Migrante',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'yxsct2tz' /* Refugiado x Migrante */,
+                                                ),
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -674,7 +731,10 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Entenda a diferença...',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '9jf44rb0' /* Entenda a diferença... */,
+                                                  ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -697,7 +757,11 @@ class _DocumentacaoWidgetState extends State<DocumentacaoWidget> {
                                                             .fromSTEB(5.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: Text(
-                                                      'Refugiados: Pessoas que foram forçadas a deixar seu país pois suas vidas ou integridade corriam risco, e que não podem voltar a seu país de origem porque não contam com proteção estatal. Contam com proteção internacional da Convenção de Pessoas refugiadas de 1951, do Protocolo de 1967 e da Declaração de Cartagena. Estão sob o mandato da Agência da ONU para Pessoas refugiadas (ACNUR). No Brasil, a implementação da proteção de pessoas refugiadas é definida pela Lei n.º 9.474/97. As pessoas refugiadas têm direito à proteção internacional específica definida pelo direito internacional dos refugiados, além de proteção geral dos direitos humanos.\n\n\nMigrante: Deslocamento voluntário em busca de melhores condições de vida, podem retornar a seu país de origem sem riscos e contam com proteção estatal. Não contam com proteção internacional específica, dependem das leis e processos internos de cada país. ',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'qlch7axf' /* Refugiados: Pessoas que foram ... */,
+                                                      ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyMedium

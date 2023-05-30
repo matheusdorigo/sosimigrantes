@@ -78,7 +78,11 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: _locale,
-      supportedLocales: const [Locale('en', '')],
+      supportedLocales: const [
+        Locale('pt'),
+        Locale('en'),
+        Locale('es'),
+      ],
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
@@ -120,6 +124,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'TesteMapa': TesteMapaWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
+
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
       bottomNavigationBar: BottomNavigationBar(
@@ -140,7 +145,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.home_outlined,
               size: 24.0,
             ),
-            label: 'Menu',
+            label: FFLocalizations.of(context).getText(
+              'p2b4aan4' /* Menu */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -148,7 +155,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.fingerprint,
               size: 24.0,
             ),
-            label: 'Documentação',
+            label: FFLocalizations.of(context).getText(
+              'vvuzwwu3' /* Documentação */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -156,7 +165,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.hotel_rounded,
               size: 24.0,
             ),
-            label: 'Home',
+            label: FFLocalizations.of(context).getText(
+              '3s0aw18n' /* Home */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -164,7 +175,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.local_hospital,
               size: 24.0,
             ),
-            label: 'Home',
+            label: FFLocalizations.of(context).getText(
+              '5mdack0p' /* Home */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -172,7 +185,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.gps_fixed_rounded,
               size: 24.0,
             ),
-            label: 'Buscar Hospitais',
+            label: FFLocalizations.of(context).getText(
+              '5r25f0sc' /* Buscar Hospitais */,
+            ),
             tooltip: '',
           )
         ],

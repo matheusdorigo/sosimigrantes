@@ -27,14 +27,13 @@ dependencies:
     sdk: flutter
   app_links: 3.4.1
   auto_size_text: 3.0.0
-  built_collection: 5.1.1
-  built_value: 8.4.3
   cached_network_image: 3.2.1
   cloud_firestore: 4.2.0
   cloud_firestore_platform_interface: 5.9.1
   cloud_firestore_web: 3.1.1
   collection: 1.17.0
   data_table_2: 2.3.12
+  emoji_flag_converter: 1.1.0
   expandable: 5.0.1
   firebase_auth: 4.2.0
   firebase_auth_platform_interface: 6.11.4
@@ -70,7 +69,6 @@ dependencies:
   hive: 2.2.3
   intl: 0.17.0
   json_path: 0.4.1
-  json_serializable: 6.6.1
   package_info_plus: 3.1.0
   package_info_plus_platform_interface: 2.0.1
   page_transition: 2.0.4
@@ -91,6 +89,7 @@ dependencies:
   sign_in_with_apple_web: 1.0.1
   smooth_page_indicator: 1.0.1
   sqflite: 2.2.6
+  stream_transform: 2.1.0
   supabase: 1.6.3
   supabase_flutter: 1.7.0
   timeago: 3.2.2
@@ -108,9 +107,6 @@ dependency_overrides:
   rxdart: 0.27.7
 
 dev_dependencies:
-  analyzer: 5.10.0
-  build_runner: 2.3.3
-  built_value_generator: 8.4.3
 
   flutter_test:
     sdk: flutter
